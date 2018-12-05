@@ -8,60 +8,53 @@ import javax.swing.JTextField;
 
 import chat.model.Chatbot;
 
+//initialize model before view, or it will crash 
 
-public class chatController
-{
+public class chatController {
 	private Chatbot simplebot;
+	private ChatFrame appFrame;
 
-	
-	public chatController()
-	{
+	public chatController() {
 		simplebot = new Chatbot();
+		appFrame = new ChatFrame(this);
 	}
 
-	public void start()
-	{
-		String userInput = "";
-		
-		while (!userInput.equalsIgnoreCase("quit"))
-		{
-			userInput = interactWithChatbot(userInput);
+	public void start() {
+
+	}
+
+	public String interactWithChatbot(String text) {
+		String output = "";
+		if (text == null) {
+			output += "You really should not send null";
 		}
+		String userResponse = JOptionPane.showInputDialog(null, "Hi whats up?");
+		output += simplebot.processText(userResponse);
+		return output;
+		// String userInput = JOptionPane.showInputDialog(null, "Hello, what would you
+		// like to talk about");
+		// String chatbotSays = simplebot.processText(userInput);
+		// return chatbotSays;
 	}
 
-	public String interactWithChatbot(String text)
-	{
-		String userInput = JOptionPane.showInputDialog(null, "Hello, what would you like to talk about");
-		String chatbotSays = simplebot.processText(userInput);
-		return chatbotSays;
-	}
-	
-	public String useChatbotCheckers(String text)
-	{
+	public String useChatbotCheckers(String text) {
 		return null;
 	}
-	
-	public Object getChatbot()
-	{
+
+	public Object getChatbot() {
 		return null;
 	}
-	
-	public Object getContent()
-	{
+
+	public Object getContent() {
 		return null;
 	}
+
 	{
 		this.ChatFrame();
-		
-	}
-	private void ChatFrame() 
-	{
 
-	
-		
 	}
-	}
-	
-	
 
-	
+	private void ChatFrame() {
+
+	}
+}

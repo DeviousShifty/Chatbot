@@ -2,7 +2,8 @@ package chat.view;
 
 import java.awt.Color;
 import java.awt.Dimension;
-
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 import javax.swing.JButton;
 import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
@@ -58,9 +59,23 @@ public class ChatPanel<LoadButton, SaveAsAction>
 	}
 	private void setupListeners()
 	{
-		
+		chatButton.addActionListener(new ActionListener()
+				{
+			private chatController appController;
+
+			public void actionPerformed(ActionEvent click)
+			{
+				String userText = chatField.getText();
+				String response = "";
+				response = appController.interactWithChatbot(userText);
+				chatArea.append(response);
+				chatArea.setCaretPosition(chatArea.getDocument().getLength());
+				chatField.setText("");
+			}
+				});
 		
 	}
+	
 	private void setupScrollPane()
 	{
 		chatArea.setEditable(false);
