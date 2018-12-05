@@ -12,6 +12,7 @@ import chat.model.Chatbot;
 public class chatController
 {
 	private Chatbot simplebot;
+
 	
 	public chatController()
 	{
@@ -49,6 +50,17 @@ public class chatController
 	{
 		return null;
 	}
+	{
+		this.ChatFrame();
+		
+	}
+	private void ChatFrame() 
+	{
+	
+		
+	}
+	}
+	
 	
 }
 	
