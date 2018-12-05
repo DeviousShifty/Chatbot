@@ -56,11 +56,12 @@ public class chatController
 	}
 	private void ChatFrame() 
 	{
+
 	
 		
 	}
 	}
 	
 	
-}
+
 	

@@ -12,6 +12,7 @@ import javax.swing.SpringLayout;
 
 import chat.controller.chatController;
 import chat.model.Chatbot;
+import javax.swing.JSlider;
 
 public class ChatPanel<LoadButton, SaveAsAction> 
 {
@@ -23,6 +24,10 @@ public class ChatPanel<LoadButton, SaveAsAction>
 	private JButton saveButton;
 	private JButton jButton;
 	private chatController app;
+	/**
+	 * @wbp.nonvisual location=16,331
+	 */
+	private final JButton button = new JButton("Check Text");
 	
 	public ChatPanel(chatController app)
 	{
@@ -37,6 +42,7 @@ public class ChatPanel<LoadButton, SaveAsAction>
 		
 		chatField = new JTextField("Talk to the bot here", 50);
 		chatArea = new JTextArea("Chat Area", 20,50);
+		chatArea.setBackground(Color.RED);
 		
 		chatPane = new JScrollPane();
 		
@@ -61,7 +67,7 @@ public class ChatPanel<LoadButton, SaveAsAction>
 		chatArea.setLineWrap(true);
 		chatArea.setWrapStyleWord(true);
 		
-		chatPane.setViewportView(chatArea);
+		chatPane.setRowHeaderView(chatArea);
 		chatPane.setHorizontalScrollBarPolicy(javax.swing.JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 		chatPane.setVerticalScrollBarPolicy(javax.swing.JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
 	}
@@ -78,25 +84,31 @@ public class ChatPanel<LoadButton, SaveAsAction>
 		this.add(chatButton);
 		this.add(chatField);
 	}
-	private void add(JScrollPane chatPane2) {
+private void add(JScrollPane chatPane) 
+{
 		
 		
 	}
-	private void add(JTextField chatField2) {
+	private void add(JTextField chatField) 
+	{
 	
 		
 	}
-	private void setPreferredSize(Dimension dimension) {
+	private void setPreferredSize(Dimension dimension) 
+	{
 		
 	}
-	private void add(JButton chatButton2) {
+	private void add(JButton chatButton) 
+	{
 		
 	}
-	private void setBackground(Color magenta) {
+	private void setBackground(Color magenta) 
+	{
 	
 		
 	}
-	private void setupLayout(Object appLayout) {
+	private void setupLayout(Object appLayout) 
+	{
 		
 		
 	}
