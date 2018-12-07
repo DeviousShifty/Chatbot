@@ -26,7 +26,7 @@ public class ChatPanel<LoadButton, SaveAsAction>
 	private JButton jButton;
 	private chatController app;
 	/**
-	 * @wbp.nonvisual location=16,331
+	 * @wbp.nonvisual location=36,331
 	 */
 	private final JButton button = new JButton("Check Text");
 	

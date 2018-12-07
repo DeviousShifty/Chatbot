@@ -34,6 +34,33 @@ public class Chatbot
 		assertNotNull("Current user data member needs to be initialized", testedBot.CurrentUser());
 	}
 
+	public String processText(String userText)
+	{
+		String answer = "";
+		if (!validityChecker(userText))
+		{
+			answer += "You really should not send null\n";
+		}
+		else
+		{
+			answer += "You said: " + userText + "\n";
+			
+			if ((boolean) contentChecker(userText))
+			{
+				answer += "You said the special words. \n";
+			}
+			ArrayList<String> responseList;
+			int randomindex = (int) (responseList.size() * Math.random());
+			int randomIndex;
+			answer += "ChatBot says:" + responseList.get(randomIndex) + "\n";
+		}
+		return answer;
+	}
+	private boolean validityChecker(String userText) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 	private Object CurrentUser() {
 		// TODO Auto-generated method stub
 		return null;

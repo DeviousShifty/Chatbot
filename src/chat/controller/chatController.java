@@ -23,13 +23,10 @@ public class chatController {
 
 	}
 
-	public String interactWithChatbot(String text) {
+	public String interactWithChatbot(String text) 
+	{
 		String output = "";
-		if (text == null) {
-			output += "You really should not send null";
-		}
-		String userResponse = JOptionPane.showInputDialog(null, "Hi whats up?");
-		output += simplebot.processText(userResponse);
+		output += simplebot.processText(text);
 		return output;
 		// String userInput = JOptionPane.showInputDialog(null, "Hello, what would you
 		// like to talk about");
