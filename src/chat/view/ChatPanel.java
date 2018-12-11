@@ -127,4 +127,5 @@ private void add(JScrollPane chatPane)
 		
 		
 	}
+	
 }

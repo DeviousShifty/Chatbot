@@ -1,5 +1,7 @@
 package chat.controller;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -51,7 +53,17 @@ public class chatController {
 
 	}
 
-	private void ChatFrame() {
+	private void ChatFrame() 
+	{
 
+	}
+	{
+	ResetButton.addActionListener(new ActionListener()
+	{
+		public void actionPerformed(ActionEvent Click)
+		{
+			
+		}
+	});
 	}
 }
