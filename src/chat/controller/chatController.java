@@ -36,12 +36,21 @@ public class chatController {
 		// return chatbotSays;
 	}
 
+	
+	private void close()
+	{
+		System.exit(0);
+	}
+	private void handleErrors(Exception error) {
+		JOptionPane.showMessageDialog(appFrame, error.getMessage());
+	}
 	public String useChatbotCheckers(String text) {
 		return null;
 	}
 
-	public Object getChatbot() {
-		return null;
+	public Object getChatbot()
+{
+		return simplebot;
 	}
 
 	public Object getContent() {
@@ -55,7 +64,7 @@ public class chatController {
 
 	private void ChatFrame() 
 	{
-
+		return appFrame;
 	}
 	{
 	ResetButton.addActionListener(new ActionListener()

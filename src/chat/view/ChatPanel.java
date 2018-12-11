@@ -11,6 +11,7 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.SpringLayout;
 
+import chat.controller.IOController;
 import chat.controller.chatController;
 import chat.model.Chatbot;
 import javax.swing.JSlider;
@@ -127,5 +128,30 @@ private void add(JScrollPane chatPane)
 		
 		
 	}
+	public void actionPerformed(ActionEvent click)
+	{
+		String input = chatField.getText();
+		String output = "";
+		output = appController.interactiWithChatbot(input);
+		chatArea.append(output);
+		chatField.setText("");
+		chatArea.setCaretPosition(chatArea.getDocument().getLength()
 	
+		
+	
+	
+	
+	
+	saveButton.addActionListener(new ActionListener()
+	{
+		public void actionPerformed(ActionEvent click)
+		{
+			String chatText = chatArea.getText();
+			String path = "~/Documents";
+			IOController.saveText(appController, path, chatText);
+			chatArea.setText("Chat saved!");
+		}
+		
+		});
+	}
 }
