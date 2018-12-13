@@ -147,7 +147,7 @@ private void add(JScrollPane chatPane)
 		public void actionPerformed(ActionEvent click)
 		{
 			String chatText = chatArea.getText();
-			String path = "~/Documents";
+			String path = ".";
 			IOController.saveText(appController, path, chatText);
 			chatArea.setText("Chat saved!");
 		}
