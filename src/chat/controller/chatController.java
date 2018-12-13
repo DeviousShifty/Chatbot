@@ -14,11 +14,11 @@ import chat.model.Chatbot;
 
 public class chatController {
 	private Chatbot simplebot;
-	private ChatFrame appFrame;
+	private chat.view.ChatFrame appFrame;
 
 	public chatController() {
 		simplebot = new Chatbot();
-		appFrame = new ChatFrame(this);
+		appFrame = new chat.view.ChatFrame(this);
 	}
 
 	public void start() {
@@ -41,7 +41,7 @@ public class chatController {
 	{
 		System.exit(0);
 	}
-	private void handleErrors(Exception error) {
+	void handleErrors(Exception error) {
 		JOptionPane.showMessageDialog(appFrame, error.getMessage());
 	}
 	public String useChatbotCheckers(String text) {
@@ -64,7 +64,7 @@ public class chatController {
 
 	private void ChatFrame() 
 	{
-		return appFrame;
+		return;
 	}
 	{
 	ResetButton.addActionListener(new ActionListener()
